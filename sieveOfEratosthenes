@@ -1,7 +1,7 @@
     static int[] prime = new int[n+1];
     static int[] pSum = new int[n+1];
 
-    static void sieveOfErantosthenes{
+    static void sieveOfErantosthenes(){
 
         //To find primes
         for(int i=2; i*i<=n; i++){
