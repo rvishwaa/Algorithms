@@ -1,21 +1,21 @@
-int[] prime = new int[n+1];
-int[] pSum = new int[n+1];
+    int[] prime = new int[n+1];
+    int[] pSum = new int[n+1];
 
-static void sieveOfErantosthenes{
+    static void sieveOfErantosthenes{
 
-  //To find primes
-  for(int i=2; i*i<=n; i++){
-    if(prime[i] == 0){
-      for(int j=p*p; j<=n; j+=p)
-        prime[j] = 1;
-     }
-  }
+        //To find primes
+        for(int i=2; i*i<=n; i++){
+            if(prime[i] == 0){
+                for(int j=p*p; j<=n; j+=p)
+                    prime[j] = 1;
+            }
+        }
   
-  //To store prefix sum
-  for(int i=2;i<=n;i++){
-    if(prime[i]==0) pSum[i] = pSum[i-1]+1;
-    else pSum[i] = pSum[i-1];
-  }
+        //To store prefix sum
+        for(int i=2;i<=n;i++){
+            if(prime[i]==0) pSum[i] = pSum[i-1]+1;
+            else pSum[i] = pSum[i-1];
+        }
   
   
-}
+    }
