@@ -1,0 +1,12 @@
+//undirected graph
+
+static boolean checkCycle(int node, int parent, List<List<Integer>> adj, boolean[] vis){
+    vis[node] = true;
+    for(Integer it: adj.get(node)){
+        if(vis[it]==false){
+            if(checkCycle(it, node, adj, vis)==true) return true;   //cycle exist
+        }
+        else if(parent != it) return true;    //cycle exist
+    }
+    return false;
+}
