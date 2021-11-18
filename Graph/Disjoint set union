@@ -1,13 +1,15 @@
 class DSU{
-    int[] parent = new int[100000];
-    int[] rank = new int[100000];
-    void makeDsu(int n){
+    int[] parent;
+    int[] rank;
+    DSU(int n){
+        parent = new int[n+1];
+        rank = new int[n+1];
         for(int i=1;i<=n;i++){
             parent[i] = i;
             rank[i] = 0;
         }
     }
-    
+
     int findPar(int node){
         if(node == parent[node]) return node;
         return parent[node] = findPar(parent[node]);
