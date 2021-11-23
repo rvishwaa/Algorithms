@@ -15,7 +15,7 @@ class DSU{
         return parent[node] = findPar(parent[node]);
     }
     
-    int union(int u, int v){
+    void union(int u, int v){
         u = findPar(u);
         v = findPar(v);
         if(rank[u]<rank[v]){
